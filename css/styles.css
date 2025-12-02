@@ -1,0 +1,94 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+h1 {
+  font-size: 38px;
+  color: #05344c;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;	
+}
+
+.clock-digital {
+
+  position: absolute;
+  right: 60px;      /* separación del borde derecho */
+  top: 40px;        /* separación del borde superior */
+  display: flex;
+  flex-direction: column; /* organiza los elementos en columna */
+  align-items: center;/* alinea texto a la derecha */
+  gap: 10px;        /* espacio entre hora, fecha y mensaje */
+  padding: 20px;
+  /* Fondo difuminado */
+  background: rgba(255, 255, 255, 0.1);  /* transparente */
+  backdrop-filter: blur(10px);           /* efecto cristal */
+  border-radius: 15px;                    /* esquinas redondeadas */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);  /* sombra sutil */
+  min-width: 200px;  /* Ancho mínimo */
+  background: rgba(255, 255, 255, 0.1); 
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+}
+
+.hora {
+  font-size: 20px;
+  font-weight: bold;
+  color: #37c78d;
+  text-align: right;
+}
+
+.fecha {
+  font-size: 20px;
+  font-weight: bold;
+  color: #4ddf8a;
+  text-align: right;
+}
+
+#mensaje {
+  font-size: 18px;
+  font-style: italic;
+  color: #62447e;
+  max-width: 250px;
+  text-align: justify;
+}
