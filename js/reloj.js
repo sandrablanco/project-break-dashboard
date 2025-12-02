@@ -51,7 +51,7 @@ function actualizarMensaje() {
     else if (horas > 7 && horas <= 12) {
      mensaje = "Buenos días, but first coffee please";}
     else if (horas > 12 && horas <= 14) {
-     mensaje = " ya queda poco para llenar el buche";}
+     mensaje = "Ya queda poco para llenar el buche";}
     else if (horas > 14 && horas <= 16) {  
      mensaje = "La energía no desaparece… se transforma en siesta después de comer";}
     else if (horas > 16 && horas <= 18) {
