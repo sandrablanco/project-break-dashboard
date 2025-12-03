@@ -27,7 +27,7 @@ function generarContraseña(longitud) {
     contraseña = contraseña + todosLosCaracteres[aleatorio];//los [] pide un caracter dentro de la caddena sumale x y guardalo otra vez
   }
   const spanPassword = document.getElementById("password");
-   spanPassword.innerHTML = `<span>${contraseña}</span>`;
+   spanPassword.innerHTML = `Contraseña Generada: <span>${contraseña}</span>`;
 }
 //boton con addEventListener
 document.getElementById("boton").addEventListener("click", function() {
