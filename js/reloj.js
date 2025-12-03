@@ -49,7 +49,7 @@ function actualizarMensaje() {
   if (horas >= 0 && horas < 7) {  
     mensaje = "Buenas noches hasta mañana los lunis y los niños se van a la cama";}
     else if (horas > 7 && horas <= 12) {
-     mensaje = "Buenos días, but first coffee please";}
+     mensaje = "Buenos días, but first let me take some coffee please";}
     else if (horas > 12 && horas <= 14) {
      mensaje = "Ya queda poco para llenar el buche";}
     else if (horas > 14 && horas <= 16) {  
@@ -65,9 +65,3 @@ function actualizarMensaje() {
     }
 setInterval(actualizarMensaje, 1000 * 60); //cada minuto
 actualizarMensaje(); //llamar a la funcion para que se muestre al cargar la pagina
-
-// //Elementos del DOM
-//  const index = document.getElementById('index')
-//  const fechaElement = document.getElementById('fecha');
-//  const mensajeElement = document.getElementById('mensaje');
-//  const horaElement = document.getElementById('hora');
