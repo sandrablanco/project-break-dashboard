@@ -19,38 +19,41 @@ function cargarLinks() {
     for (const item of favoritos) {  //recorremos el array favoritos
         const li = document.createElement('li'); //creamos una lista
         const a = document.createElement('a'); //con su enlace
+        const deleteButton = document.createElement('button');
         a.href = item.url; //asiignamos la url direccion
         a.textContent = item.nombre;//le ponemos nombre
         a.target = '_blank'; // abrimos en una nueva pestaña
+        deleteButton.textContent = 'X';
+        deleteButton.classList.add('delete-btn');//boton para elimnar lo creado
+        deleteButton.addEventListener('click', () => {});
+        deleteButton.addEventListener('click', () => {
+            eliminarLink(item.url);
+            favoritos.splice(index, 1); //eliminamos del array favoritos
+            localStorage.setItem("favoritos", JSON.stringify(favoritos));
+            cargarLinks();
+        });
+        
         li.appendChild(a); //metes el a enlace dentro del li lista
+        li.appendChild(deleteButton);//metemos en la lista el boton de eliminar
         linksList.appendChild(li); //metes el li dentro de linkslist ul
-    } 
-    deleteButton.textContent = 'X';
-  deleteButton.addEventListener('click', () => {}); // eliminar el link
+  index++; // avanzar índice
+    }
+}
 
+function añadirLink(nombre, url) { 
+    favoritos.push({ nombre, url }); //mete el enlace al final del array como favoritos
+    localStorage.setItem("favoritos", JSON.stringify(favoritos));
+    cargarLinks();
 
-//ejemplo de links
-// const links = [
-//   { nombre: "Google", url: "https://google.com" },
-//   { nombre: "YouTube", url: "https://youtube.com" },
-//   { nombre: "GitHub", url: "https://github.com" },
-//   { nombre: "Spotify", url: "https://spotify.com"}
-// ];
+addLinkButton.addEventListener('click', function() { //añadir link al pulsar el boton de añadir enlace
+  const name = nombreInput.value;
+  const url = urlInput.value;
+  if (name && url) { // ambos campos name y url esten rellenos
+    addLink(name, url);
+    nombreInput.value = '';
+    urlInput.value = '';
+  }
+});
+}
 
-// for (const item of links) {
-//   // aquí creas el elemento del link
-// }
-
-// function mostrarLinks() {
-//     // aquí va tu lógica del bucle
-// }
-// mostrarLinks();
-
-//localstorage
-// localStorage.setItem("nombre", "Sandra");
-// const usuario = localStorage.getItem("nombre");
-// console.log(usuario);//en consola aparecerá Sandra
-// localStorage.removeItem("nombre");//elimina el item nombre
-// //localstorage solo guarda texto
-// const frutas = ["manzana", "pera", "kiwi"];
-// localStorage.setItem("lista", JSON.stringify(frutas));
+añadirLink(); //cargar los links al iniciar la pagina
