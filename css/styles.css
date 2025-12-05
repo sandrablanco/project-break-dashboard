@@ -99,7 +99,7 @@ h1 {
   right: 60px;
   background: rgba(255, 255, 255, 0.1); 
   padding: 20px;
-  margin: 20px 20px;;
+  margin: 20px 20px;
   width: 450px;
   backdrop-filter: blur(10px);  
   border-radius: 12px;
@@ -149,3 +149,49 @@ border: none;
 color: #f4f4f4;
 padding: 10px;
 border-radius: 5px;}
+
+button:hover {
+  background-color: #0371d8d9;
+  transform: ease 3s all;
+}
+
+.lista-container {
+    position: relative;
+    top: 200px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    height: 350px;
+    width: 450px;
+    padding: 20px;
+    margin: 20px 0;
+    flex-direction: column;
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);  
+    border-radius: 12px;
+    overflow-y: auto;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background-color: #fffdfd93;
+}
+
+.title {
+  color: #37c78d;
+  font-size: 18px;
+}
+
+li a {
+  text-decoration: none;
+  color: #05344c;
+  font-weight: bold;
+}
+
+.delete-btn {
+  border: none;
+  padding: 5px 10px;
+  border-radius: 8px;
+  margin-top: 10px;
+  cursor: pointer;
+}

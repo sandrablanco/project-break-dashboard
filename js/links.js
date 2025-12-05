@@ -47,7 +47,7 @@ function añadirLink(nombre, url) {
 }
 
 añadirBotonLink.addEventListener('click', function() { //añadir link al pulsar el boton de añadir enlace
-  const name = nombreInput.value.trim();
+  const name = nombreInput.value.trim(); //trim quita espacios en blanco al inicio y final
   const url = urlInput.value.trim();
   if (name && url) { // ambos campos name y url esten rellenos
     añadirLink(name, url);
