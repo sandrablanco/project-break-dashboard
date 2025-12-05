@@ -16,7 +16,9 @@ let favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
 
 function cargarLinks() {
     linksList.innerHTML = ''; // limpiamos la lista antes de cargar
+    let index = 0; // índice para rastrear la posición en el array
     for (const item of favoritos) {  //recorremos el array favoritos
+      console.log("Cargando item:", item);
         const li = document.createElement('li'); //creamos una lista
         const a = document.createElement('a'); //con su enlace
         const deleteButton = document.createElement('button');
@@ -25,9 +27,7 @@ function cargarLinks() {
         a.target = '_blank'; // abrimos en una nueva pestaña
         deleteButton.textContent = 'X';
         deleteButton.classList.add('delete-btn');//boton para elimnar lo creado
-        deleteButton.addEventListener('click', () => {});
         deleteButton.addEventListener('click', () => {
-            eliminarLink(item.url);
             favoritos.splice(index, 1); //eliminamos del array favoritos
             localStorage.setItem("favoritos", JSON.stringify(favoritos));
             cargarLinks();
@@ -42,18 +42,19 @@ function cargarLinks() {
 
 function añadirLink(nombre, url) { 
     favoritos.push({ nombre, url }); //mete el enlace al final del array como favoritos
-    localStorage.setItem("favoritos", JSON.stringify(favoritos));
+    localStorage.setItem("favoritos", JSON.stringify(favoritos)); //stringify convierte el array en cadena para guardarlo en localstorage
     cargarLinks();
+}
 
-addLinkButton.addEventListener('click', function() { //añadir link al pulsar el boton de añadir enlace
-  const name = nombreInput.value;
-  const url = urlInput.value;
+añadirBotonLink.addEventListener('click', function() { //añadir link al pulsar el boton de añadir enlace
+  const name = nombreInput.value.trim();
+  const url = urlInput.value.trim();
   if (name && url) { // ambos campos name y url esten rellenos
-    addLink(name, url);
+    añadirLink(name, url);
     nombreInput.value = '';
     urlInput.value = '';
   }
 });
-}
 
-añadirLink(); //cargar los links al iniciar la pagina
+
+cargarLinks(); //cargar los links al iniciar la pagina
