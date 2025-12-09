@@ -55,9 +55,13 @@
     function mostrarPrevisionHoras(data) {
      const listaTiempo = document.getElementById("forecastwheather");
      listaTiempo.innerHTML = "";
-     const horas = data.forecast.forecastday[0].hour;
-
+     const horas = data.forecast.forecastday[0].hour;//posicion de hoy no de mañana ni pasasdo
+     const ahora = new Date();                //quiero que salga la prevision de la hora en la que me meto en adelante
+     const horaActual = ahora.getHours(); 
     for (const hora of horas) {
+        const horaPrevision = Number(hora.time.split(" ")[1].split(":")[0]);//donde haya el primer espacio y me quedo co la hora posicion 1, de la hora me quedo con la hora no los min
+
+      if (horaPrevision >= horaActual) {
         const li = document.createElement("li");
         li.classList.add("hourly-forecast");
 
@@ -71,19 +75,21 @@
         temp.textContent = `${hora.temp_c}°C`;
 
         li.append(hour, icon, temp);
-        forecastList.appendChild(li);
+        listaTiempo.appendChild(li);
+        }
+     }
     }
-    
     async function obtenerTiempo() {
     try {
     const response = await fetch(URL);
     const data = await response.json();
     console.log(data);
-    }
+    
 
     mostrarTiempoActual(data);
     mostrarPrevisionHoras(data);
     } catch (error) { console.log("Error al obtener los datos del clima:", error);
 
+        }
     }
     obtenerTiempo();
