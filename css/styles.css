@@ -242,7 +242,7 @@ button:hover {
 
 .lista-container {
     grid-column: 2;
-    position: relative
+    position: relative;
     top: 40px;
     display: flex;
     gap: 20px;
