@@ -41,6 +41,23 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+/* mis css */
+
+#fondo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  filter: blur(15px) brightness(0.7);
+  transform: scale(1.1); /* Para evitar bordes al hacer blur */
+}
 
 .main {
   display: grid;
