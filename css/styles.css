@@ -57,7 +57,7 @@ table {
 
   filter: blur(15px) brightness(0.7);
   transform: scale(1.1); /* Para evitar bordes al hacer blur */
-}
+} 
 
 .main {
   display: grid;

@@ -1,17 +1,18 @@
 //que aparezcan las imagenes aleatorias de fondo math.random
 const cambiarImagenesIntervalo = 15000; //para que cambie cada 15 seg
 const rutaImagenes = [
-  "./assets/img/1.jpg",
-  "./assets/img/2.jpg",
-  "./assets/img/3.jpg",
-  "./assets/img/4.jpg",
-  "./assets/img/5.jpg",
-  "./assets/img/6.jpg",
-  "./assets/img/7.jpg",
-  "./assets/img/8.jpg",
-  "./assets/img/9.jpg",
-  "./assets/img/10.jpg"
-];
+  "./assets/1.jpg",
+  "./assets/2.jpg",
+  "./assets/3.jpg",
+  "./assets/4.jpg",
+  "./assets/5.jpg",
+  "./assets/6.jpg",
+  "./assets/7.jpg",
+  "./assets/8.jpg",
+  "./assets/9.jpg",
+  "./assets/10.jpg",
+  "./assets/11.jpg",
+  "./assets/12.jpg",];
 
 // const fondo = document.getElementById("fondo");
 
