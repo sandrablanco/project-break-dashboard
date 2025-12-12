@@ -274,7 +274,6 @@ button:hover {
     backdrop-filter: blur(10px);
     border-radius: 12px;
     overflow-y: auto;
-    background-color: #fffdfd93;
 }
 
 .title {
@@ -294,4 +293,121 @@ li a {
   border-radius: 10px;
   margin-top: 10px;
   cursor: pointer;
+}
+/* responsive design */
+  @media (max-width: 900px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+      "reloj"
+      "meteo"
+      "pass"
+      "lista";
+    gap: 20px;
+    padding: 15px;
+    transform: scale(0.98); /* reducción efecto suave*/
+    transform-origin: top center; /* escala desde arriba */
+  }
+  
+  .clock-digital {
+    order: 0;
+    width: 100%;
+    margin-bottom: 0;
+  }
+  
+  .meteo-card {
+    width: 100%;
+    order: 1;
+    margin-bottom: 0;
+    opacity: 0.95; /* un poco de transparencia*/
+  }
+  
+  .password-card {
+    width: 100%;
+    order: 2;
+    margin: 0;
+  }
+  
+  .lista-container {
+    width: 100%;
+    order: 3;
+    margin: 0;
+    height: auto;
+    min-height: auto;
+    overflow-y: visible;
+  }
+  
+  h1 {
+    font-size: 25px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .weather-result {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    transition: flex-direction 0.3s ease;
+  }
+  
+  .forecastweather {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    transition: all 0.3s ease;
+  }
+} 
+/* vamos encogiendo la pantalla */
+@media (max-width: 768px) {
+  .main {
+    transform: scale(0.95);
+    padding: 12px;
+  }
+  
+  .hora {
+    font-size: 28px;
+  }
+  
+  .fecha {
+    font-size: 16px;
+  }
+}
+/* pantalla móvil */
+@media (max-width: 480px) {
+  .main {
+    padding: 10px;
+    gap: 15px;
+    transform: scale(0.95); /* reducción efecto suave*/
+  }
+  
+  h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .clock-digital,
+  .meteo-card,
+  .password-card,
+  .lista-container {
+    padding: 15px;
+  }
+  
+  .hora {
+    font-size: 25px;
+  }
+  
+  .fecha {
+    font-size: 12px;
+  }
+  
+  #mensaje {
+    font-size: 12px;
+  }
+
+  .forecastweather img {
+    width: 30px;
+    height: 30px;
+  }
 }
