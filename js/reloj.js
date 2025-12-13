@@ -7,6 +7,7 @@
 //necesitamos condicionales para las franjas horarias
 //conectar con el html mediante getelementbyid const index = document.getElementById('index')
 // console.log("reloj funciona");
+const index = document.getElementById('index')
 
 //formatear horas. si hora,min o seg cambia <10 añadir un 0 delante para que sea 01,02
 function ponerCero(numero) {
