@@ -13,6 +13,10 @@
 
   <div class="wheather">
     <div class="meteo-card">
+      <div class="meteo-card panel" data-panel="meteo">
+      <button class="toggle-btn">
+      <img src="./assets/icons/meteo.png" alt="Meteo">
+      </button>
       <h2>Madrid, España</h2>
       <p>Estado:</p>
 
@@ -38,14 +42,23 @@
 
     </div>
   </div>
+  </div>
 
   <div class="clock-digital">
+  <div class="clock-digital panel" data-panel="clock">
+  <button class="toggle-btn">
+  <img src="./assets/icons/clock.png" alt="Reloj">
+  </button>
     <div id="hora" class="hora">00:00:00</div>
     <div id="fecha" class="fecha">DD/MM/YYYY</div>
     <p id="mensaje">Momento del día:</p>
   </div>
-
+  </div>
   <section class="password-card">
+  <section class="password-card panel" data-panel="password">
+  <button class="toggle-btn">
+  <img src="./assets/icons/password.png" alt="Password">
+  </button>
     <h2>Crea tu contraseña Segura</h2>
     <label for="longitud">Número de caracteres de la contraseña</label>
     <input type="number" id="longitud" 
@@ -58,8 +71,13 @@
       <span id="password"></span>
     </p>
   </section>
+  </section>
 
   <section class="lista-container">
+  <section class="lista-container panel" data-panel="lista">
+  <button class="toggle-btn">
+  <img src="./assets/icons/list.png" alt="Lista">
+  </button>
     <p class="title">Añade tus enlaces favoritos</p>
 
     <div class="input-links">
@@ -70,14 +88,30 @@
       <ul id="links-list" class="links-list"></ul>
     </div>
   </section>
+  </section>
   <script src="./js/script.js"></script>
   <script src="./js/reloj.js"></script>
   <script src="./js/password.js"></script>
   <script src="./js/meteo.js"></script>
   <script src="./js/links.js"></script>
   <script src="./js/background.js"></script>
+  <script src="./js/togglepanels.js"></script>
   
 </main>
-
+<footer class="footer">
+  <nav>
+    <a href="./reloj.html">
+      <img src="./assets/img/reloj.jpg" alt="clock">
+    </a>
+    <a href="./password.html">
+      <img src="./assets/img/password.jpg" alt="password">
+    </a>
+    <a href="./meteo.html">
+      <img src="./assets/img/meteo.jpg" alt="weather">
+    </a>
+    <a href="./links.html">
+      <img src="./assets/img/links.jpg" alt="links">
+    </a>
+  </nav>
 </body>
 </html>
