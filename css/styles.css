@@ -59,6 +59,12 @@ table {
   transform: scale(1.1); /* Para evitar bordes al hacer blur */
 } 
 
+.main.single {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
 .main  {
   display: grid;
   grid-template-columns: 320px 1fr;
