@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Reloj</title>
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+
+  <main class="main single">
+    <div class="wheather">
+    <div class="meteo-card">
+    
+      <h2>Madrid, España</h2>
+      <p>Estado:</p>
+
+      <div id="weather-result" class="weather-result">
+        <div class="celsius-icon">
+          <img id="weather-icon" src="" alt="Ícono del clima">
+        </div>
+
+        <ul id="weather-data" class="weather-data">
+          <li id="precipitation">Precipitaciones: </li>
+          <li id="humidity">Húmedad: </li>
+          <li id="wind-speed">Viento: </li>
+        </ul>
+      </div>
+
+      <ul id="forecastwheather" class="forecastweather">
+        <li id="hourly-forecast">
+          <span class="hour">00:00</span>
+          <img class="icon" src="" alt="Ícono del clima">
+          <p class="temp">0°C</p>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+  </main>
+  <script src="./js/meteo.js"></script>
+  <script src="./js/background.js"></script>
+  </body>
+  </html>
