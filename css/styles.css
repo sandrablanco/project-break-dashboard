@@ -65,6 +65,21 @@ table {
   align-items: center;
   min-height: 100vh;
 }
+
+.btn-principal {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.btn-principal:hover {
+  opacity: 0.8;
+  transform: scale(1.03);
+}
+
 .main  {
   display: grid;
   grid-template-columns: 320px 1fr;
@@ -74,8 +89,13 @@ table {
     "meteo pass"
     "meteo lista";
   gap: 20px;
-  padding: 20px;
+  padding-bottom: 90px;
 }
+/* 
+.main img {
+  width: 60px;
+  height: 60px;
+} */
 
 h1 {
   font-size: 38px;
@@ -148,8 +168,9 @@ gap: 10px;
 }
 
 img {
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
+  color:aliceblue;
   justify-content: space-between;
 }
 
@@ -300,6 +321,38 @@ li a {
   margin-top: 10px;
   cursor: pointer;
 }
+
+.footer {
+  position: ended;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 0;
+  background: transparent;
+  /* background: rgba(0, 0, 0, 0.6); */
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  z-index: 20;
+}
+
+.footer nav {
+  display: flex;
+  gap: 20px;
+}
+
+.footer img {
+  width: 30px;
+  height: 30px;
+  filter: drop-shadow(0 0 4px rgba(95, 243, 146, 0.8));
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.footer img:hover {
+  transform: scale(1.15);
+} 
+
 /* responsive design */
   @media (max-width: 900px) {
   .main {
